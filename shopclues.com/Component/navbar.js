@@ -930,8 +930,6 @@ function navbar(){
                         <input type="password" placeholder="Enter your password" id="password2">
                         <br><br>
                         <input type="submit" value="Login" id="checkdetail">
-                        <input type="submit" value="login test" id="login_test">
-                        <p id="message1">Masai user authentication server not available now Please click on login test</p>
                     </form>
                     <h3>Social Login</h3>
                     <button>Continue with Facebook</button>
@@ -947,8 +945,6 @@ function navbar(){
                         <input type="password" placeholder="Enter your password" id="password1">
                         <br><br>
                         <input type="submit" value="Register" id="storedetail">
-                        <input type="submit" value="Test user" id="Test_user">
-                        <p id="message">Masai user authentication server not available now Please click on Test user</p>
                     </form>
                     <h3>Register With</h3>
                     <button>Continue with Facebook</button>

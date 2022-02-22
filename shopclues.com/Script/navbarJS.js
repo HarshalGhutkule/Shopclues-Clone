@@ -124,7 +124,7 @@ document.getElementById("showster").addEventListener("click",showRegister);
 
 
 
-// function for storing userdetail on masai server(register page)
+// function for storing userdetail on our server(register page)
 
 let storedetail = document.getElementById("storedetail");
 
@@ -154,7 +154,7 @@ async function postData(event){
 
         userdetail = JSON.stringify(userdetail);
 
-        let url = "https://masai-api-mocker.herokuapp.com/auth/register";
+        let url = "http://localhost:2349/register";
 
         try{
             let responce = await fetch(url, {
@@ -170,8 +170,7 @@ async function postData(event){
                 alert(res.message);
             }
             else{
-                alert(res.message);
-
+                alert("Register successfully");
                 div2.style.display = "none";
                 h2_2.style.color = "black";
                 h2_2.style.borderBottom = "none";
@@ -190,28 +189,6 @@ async function postData(event){
     }
     
 }
-
-// function for test user Registration
-
-let testuserRegister = (event) => {
-    event.preventDefault();
-    localStorage.setItem("userData", userdetail);
-
-    alert("Registration successfull");
-
-    div2.style.display = "none";
-    h2_2.style.color = "black";
-    h2_2.style.borderBottom = "none";
-
-    div1.style.display = "block";
-    h2_1.style.color = "#55b8c6";
-    h2_1.style.borderBottom = "2px solid #55b8c6";
-
-}
-
-let test = document.getElementById("Test_user");
-test.addEventListener("click",testuserRegister);
-
 
 
 // function for checking userdetail on masai server (login page)
@@ -233,7 +210,7 @@ async function checkData(event){
     userData = JSON.stringify(userData);
 
     try{
-        let url = "https://masai-api-mocker.herokuapp.com/auth/login";
+        let url = "http://localhost:2349/login";
         let responce = await fetch(url,{
             method:"POST",
             body:userData,
@@ -257,37 +234,6 @@ async function checkData(event){
     }
 }
 
-// function for test user login
-
-let testuserlogin = (event) => {
-    event.preventDefault();
-    let data = JSON.parse(localStorage.getItem("userData"));
-
-    if(document.getElementById("username2").value == data.username && document.getElementById("password2").value == data.password){
-        alert("Login successfull");
-        localStorage.setItem("loginData",JSON.stringify(data.username));
-        window.location.reload();
-    }
-    else{
-        alert("invalid credentials");
-    }
-}
-
-
-let usernameof = JSON.parse(localStorage.getItem("loginData"));
-
-if(usernameof != null && usernameof != ""){
-    console.log(usernameof);
-    document.getElementById("back").style.display = "none";
-    document.getElementById("login_sucess").textContent = usernameof;
-    document.getElementById("login_sucess").style.fontSize = "12px";
-    document.getElementById("login_sucess1").textContent = `Welcome ${usernameof}`;
-    document.getElementById("signout").style.display = "block";
-}
-
-
-let logtest = document.getElementById("login_test");
-logtest.addEventListener("click",testuserlogin);
 
 let getUser = async(user,token) => {
     let url = `https://masai-api-mocker.herokuapp.com/user/${user}`;

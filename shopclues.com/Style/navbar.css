@@ -574,18 +574,8 @@ h3 {
     cursor: pointer;
 }
 
-#login_test, #Test_user {
-    display: none;
-}
-
 input:focus {
     outline: none;
-}
-
-#message, #message1 {
-    font-size: 10px;
-    margin-left: 2%;
-    display: none;
 }
 
 /* scroll top button */
