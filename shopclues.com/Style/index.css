@@ -1,0 +1,254 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+}
+img:hover {
+  cursor: pointer;
+}
+body {
+  background-color: #eff7fa;
+  margin: 0%;
+}
+
+.just_after_nav {
+  display: flex;
+  gap: 20px;
+  height: 400px;
+  width: 99%;
+  margin: auto;
+  margin-top: 10%;
+}
+.sliding_after_nav {
+  flex: 4;
+  height: 390px;
+  margin-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sliding_images {
+  height: 330px;
+}
+.sliding_images {
+  cursor: pointer;
+  background-image: url("https://cdn.shopclues.com/images/banners/HB4_FashionSaturday_Web_sk_22Jan22.jpg");
+  background-size: 100% 100%;
+  animation: slider 12s infinite linear;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url("https://cdn.shopclues.com/images/banners/HB4_FashionSaturday_Web_sk_22Jan22.jpg");
+    
+  }
+  20% {
+    background-image: url("https://cdn.shopclues.com/images/banners/22Jan_HB2_Web_Korean_Cookware.jpg");
+  }
+  40% {
+    background-image: url("https://cdn.shopclues.com/images/banners/HB3_BestOfEverything_Web_Nk_23Jan22.jpg");
+  }
+  60% {
+    background-image: url("https://cdn.shopclues.com/images/banners/HB5_Creams&Moisturizers_Web_Nk_23Jan22.jpg");
+  }
+  80% {
+    background-image: url("https://cdn.shopclues.com/images/banners/HB1_Bhuwal_App_MK5_22Jan22.jpg");
+  }
+}
+
+.sliding_images_name {
+  display: flex;
+  background-color: white;
+}
+.sliding_images_name div {
+  width: 210px;
+  height: 70px;
+}
+.sliding_images_name p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 10px;
+  color: gray;
+  font-weight: 500;
+}
+
+.sliding_images_name p:hover {
+  color: #24a3b5;
+  cursor: pointer;
+}
+
+.recommodation_after_nav {
+  flex: 1;
+  /* border: 2px solid red; */
+  margin-right: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.recommodation_after_nav img {
+  width: 80%;
+  height: 126px;
+}
+.single_line {
+  height: 2px;
+  background-color: #eff7fa;
+}
+
+.six_div {
+  margin-top: 1%;
+  border: 1px solid transparent;
+}
+
+.first_three_inside_three {
+  margin: 15px;
+  height: 118px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.first_three_inside_three img {
+  width: 100%;
+  height: 100%;
+}
+.first_three_inside_three img:hover,.second_three_inside_three img:hover {
+  opacity: 60%;
+}
+
+.second_three_inside_three {
+  display: flex;
+  height: 118px;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.second_three_inside_three img {
+  width: 100%;
+  height: 100%;
+}
+.single_vertical_line {
+  width: 3px;
+  background-color: #eff7fa;
+}
+.item_store_div {
+  margin: 20px 10px 0px 10px;
+  height: 300px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  overflow: scroll;
+}
+#budget_item_store {
+  height: 200px;
+}
+.item_store_div div {
+  width: 220px;
+}
+/* .Your_Gadgets_Store:hover {
+  border: 2px solid blue;
+  cursor: pointer;
+} */
+.item_store>h1 {
+  font-weight: 500;
+  font-size: 20px;
+  color: #212121;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+.item_store_div img {
+  width: 145px;
+  margin-top: 25px;
+}
+.item_store_div h6 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #757575;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.price_div {
+  display: flex;
+  margin-top: 8px;
+}
+.fa-rupee-sign {
+  color: #757575;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.final_price {
+  margin-left: 10px;
+  margin-top: -4px;
+  font-size: 20px;
+}
+.price_div p:nth-child(1),.price_div p:nth-child(2) {
+  font-size: 14px;
+  line-height: 0px;
+  color: #757575;
+  text-decoration: line-through;
+}
+.price_div p:nth-child(3) {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 0px;
+  color: black;
+  margin-top: 5.5%;
+}
+#price_divplusp {
+  color: #24a3b5;
+  font-weight: 500;
+}
+.dis {
+  font-size: 15px;
+  font-weight: 500px;
+  color: #24a3b5;
+  margin-top: 8px;
+}
+.Your_Gadgets_Store,.trending_fashion_zone,.branded_deals, .sports_and_health, .brand_store, .best_selling_products, .deals_of_the_day, .prime_mall, .daily_essential, .festive_essential {
+  width: 200px;
+  display: flex;
+} 
+.Your_Gadgets_Store p, .trending_fashion_zone p, .branded_deals p, .sports_and_health p, .brand_store p, .best_selling_products p, .deals_of_the_day p, .prime_mall p, .daily_essential p, .festive_essential p {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #757575;
+}
+.Your_Gadgets_Store img, .trending_fashion_zone img, .branded_deals img, .sports_and_health img, .brand_store img, .best_selling_products img, .budget_bazaar img, .deals_of_the_day img, .prime_mall img, .daily_essential img, .festive_essential img{
+  margin-left: 25px;
+} 
+#sportwidth{
+  margin-left: 17%;
+}
+.marleft {
+  padding-left: 15%;
+}
+#sportwidth img{
+  height: 170px;
+}
+#marbtm {
+  margin-bottom: 5%;
+}
+.festive_essential {
+  text-align: center;
+}
+.budget_bazaar {
+  width: 250px;
+  display: flex;
+}
+.budget_bazaar:hover{
+  opacity: 75%;
+}
+.budget_bazaar img {
+  width: 230px;
+  margin-left: 100px;
+}
+#bestsell {
+  margin-left: -105%;
+}
+.Your_Gadgets{
+  display: flex;
+}
+
+.imagedivofGadget {
+  border: 1px solid red;
+}
+
+.nameofpro {
+  line-height: 0%;
+}
