@@ -35,8 +35,8 @@ body {
   margin-top: 11%;
   height: 500px;
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 15% 85%;
+  grid-template-columns: 20% 78%;
+  grid-template-rows: 20% 78%;
   grid-gap: 1%;
   grid-template-areas:
     "a b"
@@ -51,10 +51,12 @@ body {
 #heading {
   grid-area: b;
   border: 1px solid red;
+  background-color: white;
 }
 #details {
   grid-area: c;
   border: 1px solid red;
+  background-color: white;
 }
 
 /* left content */
@@ -69,6 +71,7 @@ body {
 
 .content>ul>li>i{
     color: #979797;
+    margin-right: 5%;
 }
 
 #vip {
@@ -90,4 +93,12 @@ body {
     height: 45px;
     padding: 0%;
     margin-left: -10%;
+}
+
+#heading {
+  display: flex;
+}
+
+#heading>div>ul>li {
+  list-style: none;
 }
