@@ -265,11 +265,6 @@ async function checkData(event){
             alert("Login successfully");
             let user = document.getElementById("username2").value;
             getUser(user,res.token);
-            document.getElementById("back").style.display = "none";
-            setTimeout(()=>{
-                window.location.reload();
-            },1000)
-            
         }
         
     }
@@ -291,7 +286,9 @@ let getUser = async(user,token) => {
         })
 
         let data = await responce.json();
-        localStorage.setItem("loginData",JSON.stringify(data.username));
+        localStorage.setItem("loginData",JSON.stringify({username:data.username,id:data._id,token}));
+        document.getElementById("back").style.display = "none";
+        window.location.reload();
     }
     catch(err){
         console.log(err);

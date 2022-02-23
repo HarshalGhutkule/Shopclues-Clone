@@ -75,18 +75,38 @@ function appendData(){
 
 
 // function for to add address
+addAddress();
+async function addAddress(){
 
-let {val,name,street,city,state,pincode,phonenumber} = JSON.parse(localStorage.getItem("userAddress"));
+    let {id,token} = JSON.parse(localStorage.getItem("loginData"));
 
-let x = `<div id="texts">   
-<img id="img" height="20px" src="https://img.icons8.com/ios/2x/free-shipping.png" alt="">
-<span id="shippingT">Shipping to:${val},${name}</span>
-<div id="change"><a href="SelectAddress.html">Change</a></div>
-</div>    
-<span id="add">${street},${city},${state},${pincode}|Mob-${phonenumber}</span>`
+        let url = `http://localhost:2349/users/${id}`;
 
-document.getElementById("topbar").innerHTML = x;
+    try{
+        let responce = await fetch(url, {
+            headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : `Bearer ${token}`
+            }
+        })
 
+        let data = await responce.json();
+        
+        let {val,name,street,city,state,pincode,phonenumber} = data.address;
+
+        let x = `<div id="texts">   
+            <img id="img" height="20px" src="https://img.icons8.com/ios/2x/free-shipping.png" alt="">
+            <span id="shippingT">Shipping to:${val},${name}</span>
+            <div id="change"><a href="SelectAddress.html">Change</a></div>
+            </div>    
+            <span id="add">${street},${city},${state},${pincode}|Mob-${phonenumber}</span>`
+
+            document.getElementById("topbar").innerHTML = x;
+        }
+    catch(err){
+        console.log(err);
+    }
+}
 
 // function to place order
 

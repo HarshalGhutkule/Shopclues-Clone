@@ -3,7 +3,7 @@
 
 // saveandcontiune.addEventListener("submit", savedata);
 
-function savedata(event){
+async function savedata(event){
     event.preventDefault();
 
     let pincode = document.getElementById("pincode").value;
@@ -33,7 +33,6 @@ function savedata(event){
     }
 
     let phonenumber = document.getElementById("phonenumber").value;
-    console.log(phonenumber);
     if(phonenumber == ""){
         document.getElementById("phonenumberalert").style.display = "block";
         document.getElementById("phonenumberalert").style.marginLeft = "380px";
@@ -77,7 +76,25 @@ function savedata(event){
             val
         };
 
-        localStorage.setItem("userAddress", JSON.stringify(addressofuser));
-        window.location.href = "ReviewCart.html";
+        addressofuser = JSON.stringify(addressofuser);
+
+        let {id,token} = JSON.parse(localStorage.getItem("loginData"));
+
+        let url = `http://localhost:2349/users/${id}`;
+
+        try{
+            let responce = await fetch(url, {
+                method: "PATCH",
+                body: addressofuser,
+                headers: {
+                    "Content-Type" : "application/json",
+                    "Authorization" : `Bearer ${token}`
+                }
+            })
+            window.location.href = "ReviewCart.html";
+        }
+        catch(err){
+            alert(err.message);
+        }
         }
 }

@@ -31,7 +31,6 @@ body {
 
 /* main div */
 .main {
-  border: 1px solid red;
   margin-top: 11%;
   height: 500px;
   display: grid;
@@ -45,18 +44,14 @@ body {
 
 #left {
   grid-area: a;
-  border: 1px solid red;
   background-color: white;
 }
 #heading {
   grid-area: b;
-  border: 1px solid red;
   background-color: white;
 }
 #details {
   grid-area: c;
-  border: 1px solid red;
-  background-color: white;
 }
 
 /* left content */
@@ -101,4 +96,52 @@ body {
 
 #heading>div>ul>li {
   list-style: none;
+}
+
+#heading>div:nth-child(1) {
+  font-size: 55px;
+  padding: 1%;
+  color: #24a3b5;
+}
+
+#heading>div>ul>li:nth-child(1),.clues {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#heading>div>ul>li:nth-child(2),:nth-child(3) {
+  color: slategray;
+}
+
+#heading>div>ul>a:nth-child(4) {
+  list-style: none;
+  text-decoration: none;
+  color: #24a3bc;
+}
+
+#details {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 1%;
+}
+
+#details>div {
+  padding: 3%;
+  background-color: white;
+}
+
+.bucks {
+  font-size: 14px;
+  font-weight: 500;
+  color: #00bc71;
+}
+
+.clues {
+  color: black;
+}
+
+#details>div>a {
+  text-decoration: none;
+  color: #24a3bc;
 }
