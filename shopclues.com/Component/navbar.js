@@ -937,13 +937,17 @@ function navbar(){
                 <div class="signup">
                     <form>
                         <input type="email" placeholder="Enter your email id" id="email">
-                        <br><br>
+                        <br>
+                        <p id="emailError"></p>
                         <input type="number" placeholder="Enter your mobile number" id="number">
-                        <br><br>
+                        <br>
+                        <p id="MobileError"></p>
                         <input type="text" placeholder="Enter your username" id="username1">
-                        <br><br>
+                        <br>
+                        <p id="UsernameError"></p>
                         <input type="password" placeholder="Enter your password" id="password1">
-                        <br><br>
+                        <br>
+                        <p id="PasswordError"></p>
                         <input type="submit" value="Register" id="storedetail">
                     </form>
                     <h3>Register With</h3>
@@ -953,7 +957,5 @@ function navbar(){
         </div>
     </div>`
 }
-
-
 
 export default navbar;

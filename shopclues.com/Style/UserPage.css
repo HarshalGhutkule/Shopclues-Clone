@@ -1,0 +1,93 @@
+body {
+  margin: 0px;
+  font: normal 400 14px "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #eff7fa;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24a3b5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke;
+  border-radius: 10px;
+}
+
+::selection {
+  color: #24a3b5;
+  background: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* main div */
+.main {
+  border: 1px solid red;
+  margin-top: 11%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 15% 85%;
+  grid-gap: 1%;
+  grid-template-areas:
+    "a b"
+    "a c";
+}
+
+#left {
+  grid-area: a;
+  border: 1px solid red;
+  background-color: white;
+}
+#heading {
+  grid-area: b;
+  border: 1px solid red;
+}
+#details {
+  grid-area: c;
+  border: 1px solid red;
+}
+
+/* left content */
+.content {
+  height: 100%;
+}
+
+#myaccount {
+  height: 10%;
+  padding: 7%;
+}
+
+.content>ul>li>i{
+    color: #979797;
+}
+
+#vip {
+    font-size: 18px;
+    font-weight: 500;
+    color: #24a3b5;
+}
+
+#subvip {
+    background-image: -webkit-linear-gradient(0deg,#ff934b 0%,#ff5e62 100%);
+    padding: 2%;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+.content>ul>li{
+    list-style: none;
+    height: 45px;
+    padding: 0%;
+    margin-left: -10%;
+}

@@ -578,6 +578,14 @@ input:focus {
     outline: none;
 }
 
+#emailError, #MobileError, #UsernameError, #PasswordError {
+    font-size: 10px;
+    color: red;
+    margin-top: 0%;
+    margin-left: 2%;
+    display: none;
+}
+
 /* scroll top button */
 
 .uparrow {

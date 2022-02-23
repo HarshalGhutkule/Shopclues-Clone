@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="shortcut icon" href="https://images.shopclues.com/images/ui/s_logo.png">
+    <link rel="stylesheet" href="../Style/navbar.css">
+    <link rel="stylesheet" href="../Style/UserPage.css">
+    <title>Home - India's Leading Marketplace  </title>
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="main">
+        <div id="left">
+            <div class="content">
+                <div id="myaccount">
+                    <span id="vip">My Account <span id="subvip">Join VIP club</span></span>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fal fa-clipboard-list"></i>
+                        My Orders
+                    </li>
+                    <li>
+                        <i class="fal fa-comment-alt-dots"></i>
+                        My Returns
+                    </li>
+                    <li>
+                        <i class="far fa-heart"></i>
+                        Wishlist
+                    </li>
+                    <li>
+                        <i class="fas fa-user-circle"></i>
+                        My Profile
+                    </li>
+                    <li>
+                        <i class="fal fa-comment-alt-dots"></i>
+                        My Chat
+                    </li>
+                    <li>
+                        <i class="fal fa-rupee-sign"></i>
+                        My CluesBucks
+                    </li>
+                    <li>
+                        <i class="fal fa-comment-alt-edit"></i>
+                        My Feedback
+                    </li>
+                    <li>
+                        <i class="fal fa-user-headset"></i>
+                        Help & Support
+                    </li>
+                    <li>
+                        <i class="fal fa-rupee-sign"></i>
+                        My Favorite Stores
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="heading"></div>
+        <div id="details"></div>
+    </div>
+</body>
+</html>
+<script src="../Script/navbarJS.js"></script>
+<script type="module">
+
+  import navbar from "../Component/navbar.js"
+
+  let nav = document.querySelector(".navbar");
+
+  nav.innerHTML = navbar();
+
+</script>

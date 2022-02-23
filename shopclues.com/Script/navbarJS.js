@@ -166,10 +166,51 @@ async function postData(event){
             })
 
             let res = await responce.json();
-            if(res.error === true){
+            let emailDisplay = document.querySelector("#emailError");
+            let mobileDisplay = document.querySelector("#MobileError");
+            let usernameDisplay = document.querySelector("#UsernameError");
+            let passwordDisplay = document.querySelector("#PasswordError");
+            if(res.errors !== undefined){
+                emailDisplay.style.display = "none";
+                mobileDisplay.style.display = "none";
+                usernameDisplay.style.display = "none";
+                passwordDisplay.style.display = "none";
+                res.errors.forEach((el)=>{
+
+                    if(el.param === "email"){
+                        
+                        emailDisplay.style.display = "block";
+                        emailDisplay.innerHTML = el.msg;
+                    }
+                    if(el.param === "number"){
+                        
+                        mobileDisplay.style.display = "block";
+                        mobileDisplay.innerHTML = el.msg;
+                    }
+                    if(el.param === "username"){
+                        
+                        usernameDisplay.style.display = "block";
+                        usernameDisplay.innerHTML = el.msg;
+                    }
+                    if(el.param === "password"){
+                        
+                        passwordDisplay.style.display = "block";
+                        passwordDisplay.innerHTML = el.msg;
+                    }
+                })
+            }
+            else if(res.status !== "ok"){
                 alert(res.message);
             }
             else{
+                document.getElementById("email").value= "";
+                document.getElementById("number").value = "";
+                document.getElementById("username1").value = "";
+                document.getElementById("password1").value = "";
+                emailDisplay.style.display = "none";
+                mobileDisplay.style.display = "none";
+                usernameDisplay.style.display = "none";
+                passwordDisplay.style.display = "none";
                 alert("Register successfully");
                 div2.style.display = "none";
                 h2_2.style.color = "black";
@@ -181,10 +222,7 @@ async function postData(event){
             }
         }
         catch(err){
-            if(err){
-                document.getElementById("Test_user").style.display = "inline-block";
-                document.getElementById("message").style.display = "block";
-            }
+            alert(err.message);
         }
     }
     
@@ -220,23 +258,29 @@ async function checkData(event){
         })
 
         let res = await responce.json();
-        alert("Login successfully");
-        let user = document.getElementById("username2").value;
-        getUser(user,res.token);
-        document.getElementById("back").style.display = "none";
-        window.location.reload();
-    }
-    catch(err){
-        if(err){
-            document.getElementById("login_test").style.display = "inline-block";
-            document.getElementById("message1").style.display = "block";
+        if(res.status !== "ok"){
+            alert(res.message);
         }
+        else{
+            alert("Login successfully");
+            let user = document.getElementById("username2").value;
+            getUser(user,res.token);
+            document.getElementById("back").style.display = "none";
+            setTimeout(()=>{
+                window.location.reload();
+            },1000)
+            
+        }
+        
+    }
+    catch(err){    
+        alert(err.message);
     }
 }
 
 
 let getUser = async(user,token) => {
-    let url = `https://masai-api-mocker.herokuapp.com/user/${user}`;
+    let url = `http://localhost:2349/users?username=${user}`;
 
     try{
         let responce = await fetch(url, {
