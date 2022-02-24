@@ -39,6 +39,11 @@ document.getElementById("nav7").addEventListener("mouseout",mouseoutNavigation.b
 document.getElementById("nav8").addEventListener("mouseout",mouseoutNavigation.bind(null,"nav8"));
 
 // function to openSigninPage
+let pleaseSignin = JSON.parse(localStorage.getItem("pleaseSignin"));
+if(pleaseSignin == "1"){
+    document.getElementById("back").style.display = "block";
+    localStorage.setItem("pleaseSignin", JSON.stringify(""));
+}
 
 let openSigninPage = ()=> {
     document.getElementById("back").style.display = "block";

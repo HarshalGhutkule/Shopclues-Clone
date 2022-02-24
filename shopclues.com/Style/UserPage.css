@@ -64,59 +64,68 @@ body {
   padding: 7%;
 }
 
-.content>ul>li>i{
-    color: #979797;
-    margin-right: 5%;
+.content > ul > li > i {
+  color: #979797;
+  margin-right: 5%;
 }
 
 #vip {
-    font-size: 18px;
-    font-weight: 500;
-    color: #24a3b5;
+  font-size: 18px;
+  font-weight: 500;
+  color: #24a3b5;
+  cursor: pointer;
 }
 
 #subvip {
-    background-image: -webkit-linear-gradient(0deg,#ff934b 0%,#ff5e62 100%);
-    padding: 2%;
-    font-size: 15px;
-    color: white;
-    border-radius: 5px;
+  background-image: -webkit-linear-gradient(0deg, #ff934b 0%, #ff5e62 100%);
+  padding: 2%;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
 }
 
-.content>ul>li{
-    list-style: none;
-    height: 45px;
-    padding: 0%;
-    margin-left: -10%;
+.content > ul > li {
+  list-style: none;
+  height: 45px;
+  padding: 0%;
+  margin-left: -10%;
+  cursor: pointer;
+}
+.content > ul > li:hover {
+  color: #24a3b5;
 }
 
 #heading {
   display: flex;
 }
 
-#heading>div>ul>li {
+#heading > div > ul > li {
   list-style: none;
 }
 
-#heading>div:nth-child(1) {
+#heading > div:nth-child(1) {
   font-size: 55px;
   padding: 1%;
   color: #24a3b5;
 }
 
-#heading>div>ul>li:nth-child(1),.clues {
+#heading > div > ul > li:nth-child(1),
+.clues,
+#myorders {
   font-size: 16px;
   font-weight: 500;
 }
 
-#heading>div>ul>li:nth-child(2),:nth-child(3) {
+#heading > div > ul > li:nth-child(2),
+:nth-child(3) {
   color: slategray;
 }
 
-#heading>div>ul>a:nth-child(4) {
+#heading > div > ul > a:nth-child(4) {
   list-style: none;
   text-decoration: none;
   color: #24a3bc;
+  cursor: pointer;
 }
 
 #details {
@@ -126,7 +135,7 @@ body {
   grid-gap: 1%;
 }
 
-#details>div {
+#details > div {
   padding: 3%;
   background-color: white;
 }
@@ -141,7 +150,172 @@ body {
   color: black;
 }
 
-#details>div>a {
+#details > div > a {
   text-decoration: none;
   color: #24a3bc;
 }
+
+/* my orders */
+
+#heading1 {
+  grid-area: b;
+  background-color: white;
+  padding-left: 3%;
+  display: none;
+}
+#details1 {
+  grid-area: c;
+  background-color: white;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+#ordersReturns {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+#ordersReturns p {
+  width: 100px;
+  text-align: center;
+  height: 30px;
+}
+#ordersReturns p:nth-child(1) {
+  color: #24a3b5;
+  border-bottom: 3px solid #24a3b5;
+}
+
+#orderappend {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* my profile */
+#heading2 {
+  grid-area: b;
+  background-color: white;
+  padding-left: 3%;
+  display: none;
+}
+#details2 {
+  grid-area: c;
+  background-color: white;
+  padding: 5%;
+  display: none;
+}
+
+#fal {
+  display: flex;
+}
+
+#fal > div > i {
+  margin-left: 5%;
+  margin-top: 15%;
+  font-size: 70px;
+  color: #24a3b5;
+}
+
+#fal > div > ul > li {
+  list-style: none;
+}
+
+#profileEdit {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+#profileEdit p {
+  text-align: center;
+  height: 30px;
+}
+
+#updateProfile {
+  height: 200px;
+  display: flex;
+}
+
+#updateProfile > div {
+  width: 50%;
+}
+
+#updateProfile > div:nth-child(2) {
+  margin-top: 6%;
+}
+
+#updateProfile > div > input,
+label {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#updatebtn, #changebtn {
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(0deg, #ff934b 0%, #ff5e62 100%);
+  font-size: 15px;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* my address */
+#details3 {
+  grid-area: c;
+  background-color: white;
+  padding: 2%;
+  display: none;
+}
+
+#details3 > div {
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 35%;
+  border-radius: 5px;
+}
+
+#details3 > div > a {
+  text-decoration: none;
+  color: #24a3bc;
+}
+
+/* my bank */
+#details4 {
+  grid-area: c;
+  background-color: white;
+  padding: 2%;
+  display: none;
+}
+
+/* change password*/
+#details5 {
+  grid-area: c;
+  background-color: white;
+  padding: 2%;
+  display: none;
+}
+
+#details5 > div > div > input,
+label {
+  width: 40%;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/* manage payment*/
+#details6 {
+  grid-area: c;
+  background-color: white;
+  padding: 2%;
+  display: none;
+}
+
+#red {
+  color: #24a3b5;
+}
+

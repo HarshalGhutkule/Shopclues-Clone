@@ -148,6 +148,14 @@ btn.addEventListener("click", ()=>{
 
     localStorage.setItem("paymentdata", JSON.stringify(paymentdata));
     localStorage.setItem("paymentAmount", JSON.stringify(paymentAmt));
-    window.location.href = "SelectAddress.html";
+    let username = JSON.parse(localStorage.getItem("loginData"));
+    if(!username){
+        window.location.href = "../index.html";
+        localStorage.setItem("pleaseSignin", JSON.stringify("1"));
+    }
+    else{
+        window.location.href = "SelectAddress.html";
+    }
+    
 })
 
