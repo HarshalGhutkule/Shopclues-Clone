@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="shortcut icon" href="https://images.shopclues.com/images/ui/s_logo.png">
+    <link rel="stylesheet" href="../Style/navbar.css">
+    <link rel="stylesheet" href="../Style/UserPage.css">
+    <title>Home - India's Leading Marketplace  </title>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+          window.history.forward();
+        }
+      </script>
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="main">
+        <div id="left">
+            <div class="content">
+                <div id="myaccount">
+                    <span id="vip">My Account <span id="subvip">Join VIP club</span></span>
+                </div>
+                <ul>
+                    <li id="red">
+                        <i class="fal fa-clipboard-list"></i>
+                        My Orders <i class="fa-thin fa-square-0"></i>
+                    </li>
+                    <li id="red">
+                        <i class="fal fa-comment-alt-dots"></i>
+                        My Returns
+                    </li>
+                    <li>
+                        <i class="far fa-heart"></i>
+                        Wishlist
+                    </li>
+                    <li id="red">
+                        <i class="fas fa-user-circle"></i>
+                        My Profile
+                    </li>
+                    <li>
+                        <i class="fal fa-comment-alt-dots"></i>
+                        My Chat
+                    </li>
+                    <li>
+                        <i class="fal fa-rupee-sign"></i>
+                        My CluesBucks
+                    </li>
+                    <li>
+                        <i class="fal fa-comment-alt-edit"></i>
+                        My Feedback
+                    </li>
+                    <li>
+                        <i class="fal fa-user-headset"></i>
+                        Help & Support
+                    </li>
+                    <li>
+                        <i class="fal fa-rupee-sign"></i>
+                        My Favorite Stores
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="heading">
+            <div><i class="fal fa-user-circle"></i></div>
+            <div id="editMYprofile">
+                <!-- details appending from js -->
+            </div>
+        </div>
+        <div id="details">
+            <div>
+                <p class="clues">Clues Bucks</p>
+                <p class="bucks">You have 0  Clues Bucks</p>
+                <p>Every time you buy an item from ShopClues.com, we credit your account with Clues Bucks.</p>
+                <a href="../ProductListPage.html">Continue Shopping</a>
+            </div>
+            <div>
+                <p class="clues">Rate Your Purchase</p>
+                <p>Feedback</p>
+                <p>No feedback pending.</p>
+            </div>
+            <div>
+                <p class="clues">My Favorite Stores</p>
+                <p>You have not tagged any Merchant as your Favorite Store.</p>
+            </div>
+            <div>
+                <p class="clues">My Address</p>
+                <p id="editAddress"></p>
+                <a href="../Pages/editAddress.html">Edit Address</a>
+            </div>
+        </div>
+        <div id="heading1">
+            <div>
+                <p id="myorders">My Orders</p>
+            </div>
+            <div id="ordersReturns">
+                <p>Orders</p>
+                <p>Returns</p>
+            </div>
+        </div>
+        <div id="details1">
+            <div id="orderappend">
+                <!-- details appending from js -->
+            </div>
+        </div>
+        <div id="heading2">
+            <div>
+                <p id="myorders">My Profile</p>
+            </div>
+            <div id="profileEdit">
+                <p>My Profile</p>
+                <p>My Address Book</p>
+                <p>Bank Details</p>
+                <p>Change Password</p>
+                <p>Manage Payments</p>
+            </div>
+        </div>
+        <div id="details2">
+            <div id="fal">
+                <div><i class="fal fa-user-circle"></i></div>
+                <div id="subfal">
+                    
+                </div>
+            </div>
+            <div id="updateProfile">
+                <div>
+                    <p id="myorders">Update your Profile</p>
+                    <label for="">First Name</label>
+                    <br>
+                    <input type="text" id="firstName">
+                    <br><br>
+                    <label for="">Last Name</label>
+                    <br>
+                    <input type="text" id="lastName">
+                </div>
+                <div>
+                    <label for="">Number</label>
+                    <br>
+                    <input type="text" id="mobileNumber">
+                    <br><br>
+                    <label for="">Email</label>
+                    <br>
+                    <input type="text" id="userEmail">
+                    <br><br>
+                    <button id="updatebtn">Update Profile</button>
+                </div>
+            </div>
+        </div>
+        <div id="details3">
+            <p id="myorders">Address Book</p>
+            <div id="subdetail3">
+                
+            </div>
+        </div>
+        <div id="details4">
+            <p id="myorders">Bank Details</p>
+            <div>
+                <i class="fa-solid fa-building-columns"></i>
+                <p>You haven't added any bank accounts.</p>
+            </div>
+        </div>
+        <div id="details5">
+            <p id="myorders">Change Password</p>
+            <div>
+                <i class="fa-solid fa-building-columns"></i>
+                <div>
+                    <br>
+                    <label for="">Current Password</label>
+                    <br>
+                    <input type="password" id="CurrentPassword">
+                    <br><br>
+                    <label for="">New Password</label>
+                    <br>
+                    <input type="password" id="NewPassword">
+                    <br><br>
+                    <label for="">Confirm New Password</label>
+                    <br>
+                    <input type="password" id="ConfirmNewPassword">
+                    <br><br>
+                    <button id="changebtn">Change Password</button>
+                </div>
+            </div>
+        </div>
+        <div id="details6">
+            <p id="myorders">Saved Cards</p>
+            <div>
+                <i class="fa-solid fa-building-columns"></i>
+                <p>Currently you do not have any saved cards.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../Script/navbarJS.js"></script>
+<script src="../Script/UserPage.js"></script>
+<script type="module">
+
+  import navbar from "../Component/navbar.js"
+
+  let nav = document.querySelector(".navbar");
+
+  nav.innerHTML = navbar();
+
+</script>

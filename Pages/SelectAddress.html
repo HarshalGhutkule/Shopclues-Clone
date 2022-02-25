@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://images.shopclues.com/images/ui/s_logo.png">
+    <title>https://secure.shopclues.com/atom/acart/SelectAddress</title>
+    <link rel="stylesheet" href="../Style/SelectAddress.css" />
+  </head>
+  <body>
+    <div class="cart_steps">
+      <div class="sc_contect_wraper">
+          <div class="logo"><a href="../index.html"><img src="//images.shopclues.com/images/ui/shopclues_logo@2x.png" alt=""> </a>      
+          </div>
+          <div class="n_steps">
+              <ul>
+                  <li class="progress">Select Address</li>
+                  <li>Review Cart</li>
+                  <li>Select Payment</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+    <div class="edit_address">
+      <h2>Edit Address</h2>
+      <form class="select_address" onsubmit="savedata(event)">
+        <div class="height_div">
+          <input type="text" placeholder="* Pincode" id="pincode"/>
+          <br>
+          <span id="pinalert">Please enter valid pincode of 6 digits</span>
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+
+        <div class="height_div double_up span_sider">
+          <input type="text" placeholder="* City" id="city"/>
+          <input type="text" placeholder="* State" id="state"/>
+          <div>
+            <span id="cityalert">Please enter your city </span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <span style="margin-left: 240px;" id="statealert">Please enter your state</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div double_up">
+          <input type="text" placeholder="* Name" id="name"/>
+          <input type="text" placeholder="* Phone Number" id="phonenumber"/>
+          <div>
+            <span id="namealert">Please enter your name </span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <span style="margin-left: 230px;" id="phonenumberalert">Please enter valid 10 digit mobile number</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div double_up">
+          <input type="text" placeholder="* House/Plot No" id="house"/>
+          <input type="text" placeholder="Street/Locality/Area/Landmark" id="street"/>
+          <div>
+            <span id="housealert">Please enter your address</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div">
+          <input type="text" placeholder="GSTIN" id="gst"/>
+        </div>
+
+        <div class="save_btn">
+            <span>Address Type</span>
+    
+            <input type="radio" name="drone" value="home" checked id="radio1"/>
+            <label for="home">Home</label>
+    
+            <input type="radio" name="drone" value="office" id="radio2"/>
+            <label for="office">Office</label>
+    
+            <input type="radio" name="drone" value="other" id="radio3"/>
+            <label for="other">Other</label>
+          </div>
+          <input type="submit" value="Save & Continue" class="savecont">
+      </form>
+      
+    </div>
+  </body>
+</html>
+
+<script src="../Script/SelectAddress.js"></script>
