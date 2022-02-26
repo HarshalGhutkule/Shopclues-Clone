@@ -160,7 +160,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    width: 320px;
+    width: 520px;
 }
 #add{
     color: #757575;
@@ -170,7 +170,7 @@ body {
 #change{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-    margin-left: 430px;
+    margin-left: 250px;
 }
 #change a {
     text-decoration: none;

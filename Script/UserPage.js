@@ -3,7 +3,7 @@ editMYprofile();
 async function editMYprofile() {
   let { id, token } = JSON.parse(localStorage.getItem("loginData"));
 
-  let url = `http://localhost:2349/users/${id}`;
+  let url = `https://shopclues-backend.herokuapp.com/users/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -101,7 +101,7 @@ orderappend();
 async function orderappend() {
   let { id, token } = JSON.parse(localStorage.getItem("loginData"));
 
-  let url = `http://localhost:2349/orders/${id}`;
+  let url = `https://shopclues-backend.herokuapp.com/orders/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -152,7 +152,7 @@ async function updateProfileOfUser() {
 
   let { id, token } = JSON.parse(localStorage.getItem("loginData"));
 
-  let url = `http://localhost:2349/users/update/${id}`;
+  let url = `https://shopclues-backend.herokuapp.com/users/update/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -384,7 +384,7 @@ async function updatePasswordOfUser() {
 
     let { id, token } = JSON.parse(localStorage.getItem("loginData"));
 
-    let url = `http://localhost:2349/reset/${id}`;
+    let url = `https://shopclues-backend.herokuapp.com/reset/${id}`;
 
     try {
       let responce = await fetch(url, {

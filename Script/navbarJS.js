@@ -218,7 +218,7 @@ function timeout() {
 
       userdetail = JSON.stringify(userdetail);
 
-      let url = "http://localhost:2349/register";
+      let url = "https://shopclues-backend.herokuapp.com/register";
 
       try {
         let responce = await fetch(url, {
@@ -302,7 +302,7 @@ function timeout() {
     userData = JSON.stringify(userData);
 
     try {
-      let url = "http://localhost:2349/login";
+      let url = "https://shopclues-backend.herokuapp.com/login";
       let responce = await fetch(url, {
         method: "POST",
         body: userData,
@@ -326,6 +326,8 @@ function timeout() {
 
   let usernameof = JSON.parse(localStorage.getItem("loginData"));
 
+  console.log(usernameof);
+
   if (usernameof != null && usernameof != "") {
     document.getElementById("back").style.display = "none";
     document.getElementById("login_sucess").textContent = usernameof.username;
@@ -337,7 +339,7 @@ function timeout() {
   }
 
   let getUser = async (user, token) => {
-    let url = `http://localhost:2349/users?username=${user}`;
+    let url = `https://shopclues-backend.herokuapp.com/users?username=${user}`;
 
     try {
       let responce = await fetch(url, {
@@ -387,10 +389,13 @@ function timeout() {
   
   let appendCartdata = async() => {
 
-  let { id, token } = JSON.parse(localStorage.getItem("loginData"));
+  let idtoken = JSON.parse(localStorage.getItem("loginData"));
 
-  if(id !== undefined){
-    let url = `http://localhost:2349/carts/${id}`;
+  console.log(idtoken);
+
+  if(idtoken !== null && idtoken !== ""){
+    let {id,token} = idtoken;
+    let url = `https://shopclues-backend.herokuapp.com/carts/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -437,12 +442,12 @@ function timeout() {
   
         let x = "";
   
-        data.forEach(({ title, image, price }, index) => {
+        data.forEach(({ product_name, image, price }, index) => {
           x += `<div>
                       <img src="${image}" alt="">
                   </div>
                   <div id="rs">
-                      <p>${title}</p>
+                      <p>${product_name}</p>
                       <p>Rs.${price}</p>
                   </div>`;
   

@@ -138,7 +138,7 @@ h3 {
   /* padding: 30px; */
   padding-left: 15px;
   padding-top: 5%;
-  height: 50%;
+  height: 20%;
   margin-top: 10%;
 }
 #card_details {
@@ -258,11 +258,4 @@ input[type="submit"] {
 }
 .radio {
   padding: 25px;
-}
-
-#sampletest {
-  margin-left: 5%;
-}
-#sampletest p {
-  line-height: 40%;
 }

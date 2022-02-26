@@ -5,10 +5,11 @@ appendData();
 
 async function appendData(){
     
-  let { id, token } = JSON.parse(localStorage.getItem("loginData"));
+  let idtoken = JSON.parse(localStorage.getItem("loginData"));
 
-  if(id !== undefined){
-    let url = `http://localhost:2349/carts/${id}`;
+  if(idtoken !== null){
+    let {id,token} = idtoken;
+    let url = `https://shopclues-backend.herokuapp.com/carts/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -73,7 +74,7 @@ async function appendData(){
                     
                     console.log(getdata);
 
-  let url = `http://localhost:2349/carts/${_id}`;
+  let url = `https://shopclues-backend.herokuapp.com/carts/${_id}`;
 
   try {
     let responce = await fetch(url, {

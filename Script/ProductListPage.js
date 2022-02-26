@@ -4,7 +4,7 @@ let data;
 let List_div = document.querySelector("#list_div");
 product();
 async function product() {
-  const response = await fetch("http://localhost:2349/mobiles", {
+  const response = await fetch("https://shopclues-backend.herokuapp.com/mobiles", {
     method: "GET", 
     headers: {
       "Content-Type": "application/json",

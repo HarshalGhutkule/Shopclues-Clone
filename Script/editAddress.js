@@ -76,7 +76,7 @@ async function savedata(event){
 
         let {id,token} = JSON.parse(localStorage.getItem("loginData"));
 
-        let url = `http://localhost:2349/users/${id}`;
+        let url = `https://shopclues-backend.herokuapp.com/users/${id}`;
 
         try{
             let responce = await fetch(url, {

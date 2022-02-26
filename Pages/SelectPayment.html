@@ -40,7 +40,7 @@
               <label for="">Net Banking</label>
             </li>
             <li>
-              <input name="radioof" class="radio" type="radio" />
+              <input name="radioof" class="radio" type="radio" value="Credit card" checked/>
               <label for="">Paytm</label>
             </li>
             <li>
@@ -67,35 +67,9 @@
         </div>
       </div>
       <div id="card_details">
-        <h3>Credit Card</h3>
+        <h3>Paytm</h3>
         <div class="form_box">
           <form onsubmit="paymentDone(event)" class="form">
-            <input
-              class="card_num"
-              type="number"
-              maxlength="15"
-              placeholder="Enter card number"
-            />
-            <p class="invalid">invalid card number</p>
-            <br />
-            <input id="month" class="validity" type="number" placeholder="MM" />
-            <span>/</span>
-            <input id="year" class="validity" type="number" placeholder="YY" />
-            <input
-              id="cvv"
-              class="validity cvv"
-              type="text"
-              placeholder="CVV"
-            />
-            <p class="invalid">invalid date</p>
-            <input
-              class="card_name"
-              type="text"
-              placeholder="Enter name on card"
-            />
-            <p class="invalid">invalid card name</p>
-            <br />
-            <label><input type="checkbox" />Save this card</label>
             <input type="submit" id="pay"/>
           </form>
         </div>
@@ -150,14 +124,6 @@
               </label>
             </li>
           </ul>
-        </div>
-        <div id="sampletest">
-          <p><strong>Sample card detail for testing</strong></p>
-          <p>Card number = 123412341234</p>
-          <p>MM = 04</p>
-          <p>YY = 2024</p>
-          <p>CVV = 123</p>
-          <p>name = "Harshal Ghutkule"</p>
         </div>
       </div>
     </div>

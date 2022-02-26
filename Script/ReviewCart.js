@@ -10,7 +10,7 @@ async function appendData(){
     let { id, token } = JSON.parse(localStorage.getItem("loginData"));
 
   if(id !== undefined){
-    let url = `http://localhost:2349/carts/${id}`;
+    let url = `https://shopclues-backend.herokuapp.com/carts/${id}`;
 
   try {
     let responce = await fetch(url, {
@@ -46,7 +46,7 @@ async function appendData(){
         let grandT=document.getElementById("gTotal");
         let totalPrice=document.getElementById("priceOf");
 
-        grandT.textContent=`Rs${tt-1375}`;
+        grandT.textContent=`Rs${tt-0}`;
 
         totalPrice.textContent=`Rs${tt}`;
 
@@ -70,7 +70,7 @@ async function appendData(){
             
             totalPrice.textContent=`Rs${count*price}`;
 
-            grandT.textContent=`Rs${count*price-1375}`;
+            grandT.textContent=`Rs${count*price-0}`;
 
         }
         function subs(price,el){
@@ -81,7 +81,7 @@ async function appendData(){
 
             totalPrice.textContent=`Rs${count*price}`;
         
-            grandT.textContent=`Rs${count*price-1375}`;
+            grandT.textContent=`Rs${count*price-0}`;
             }
             }
         })
@@ -97,7 +97,7 @@ async function addAddress(){
 
     let {id,token} = JSON.parse(localStorage.getItem("loginData"));
 
-        let url = `http://localhost:2349/users/${id}`;
+        let url = `https://shopclues-backend.herokuapp.com/users/${id}`;
 
     try{
         let responce = await fetch(url, {

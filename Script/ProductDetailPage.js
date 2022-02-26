@@ -15,11 +15,6 @@ function openCity(evt, cityName) {
 }
 
 
-
-
-
-
-
     let newarrivals1=document.getElementById('newarrival').addEventListener("click",newarrivalsfxn)
     let min40off=document.getElementById('min40%off');
    // min40off.style.color="#24a3b5";
@@ -660,7 +655,7 @@ function min40offfxnAuto(){
    
 product()
 async function product() {
-  const response = await fetch(`http://localhost:2349/mobiles/${product_id}`, {
+  const response = await fetch(`https://shopclues-backend.herokuapp.com/mobiles/${product_id}`, {
     method: "GET", // *GET, POST, PUT, DELETE, etc.
     headers: {
       "Content-Type": "application/json",
@@ -741,8 +736,8 @@ async function product() {
         ><h2 class="price">₹${price}</h2>
         <h2><del>₹${+price + 101}</del></h2>
         <p class="mrp">MRP:</p>
-        <h2><del>₹${+price + 4375}</del></h2>
-        <p class="discount">${discount}% off</p></span>
+        <h2><del>₹${+price + 437}</del></h2>
+        <p class="discount">${discount} off</p></span>
       <p id="">Inclusive of all taxes</p>
       <div class="super_discount" id="from_js">
         <div class="discount_head">
@@ -895,7 +890,7 @@ async function product() {
       obj = JSON.stringify(obj);
 
     try {
-      let url = "http://localhost:2349/carts";
+      let url = "https://shopclues-backend.herokuapp.com/carts";
       let responce = await fetch(url, {
         method: "POST",
         body: obj,
