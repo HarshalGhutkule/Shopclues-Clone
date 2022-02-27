@@ -114,13 +114,13 @@ async function orderappend() {
     let data = await responce.json();
 
     data.forEach((el) => {
-      let { image, title, price } = el;
+      let { image, product_name, price } = el;
 
       let x = `<div><div>
                     <img src=${image} alt="product">
                 </div>
                 <div>
-                    <p>${title}</p>
+                    <p>${product_name}</p>
                     <p>Price: Rs${price}</p>
                 </div></div>`;
       document.getElementById("orderappend").innerHTML += x;

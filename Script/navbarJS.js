@@ -80,7 +80,7 @@ function timeout() {
     if (usernameWhenUserpage == "" || usernameWhenUserpage == null) {
       document.getElementById("back").style.display = "block";
     } else {
-      window.location.href = "./Pages/UserPage.html";
+      window.location.href = "/Pages/UserPage.html";
     }
   };
 

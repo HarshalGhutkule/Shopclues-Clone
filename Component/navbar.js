@@ -45,7 +45,7 @@ function navbar(){
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href="./Pages/CartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
+                    <a href="/Pages/CartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
                     <div class="hover_content1">
                         <div id="quickCart">
                             <div class="nItems">
@@ -133,22 +133,22 @@ function navbar(){
                 <!-- Mobiles & More dropdown options -->
 
                 <li id="nav1">
-                    <a href="ProductListPage.html">Mobiles & More</a>
+                    <a href="/ProductListPage.html">Mobiles & More</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li><strong><a href="ProductListPage.html">Smartphones & Tablets</a></strong></li>
-                                    <li><a href="ProductListPage.html">I KALL</a></li>
-                                    <li><a href="ProductListPage.html">Mi</a></li>
-                                    <li><a href="ProductListPage.html">Realme</a></li>
-                                    <li><a href="ProductListPage.html">Samsung</a></li>
-                                    <li><a href="ProductListPage.html">Vivo</a></li>
-                                    <li><a href="ProductListPage.html">Oppo</a></li>
-                                    <li><a href="ProductListPage.html">Apple</a></li>
-                                    <li><a href="ProductListPage.html">Techno</a></li>
-                                    <li><a href="ProductListPage.html">Infinix</a></li>
-                                    <li><a href="ProductListPage.html">Micromax</a></li>
+                                    <li><strong><a href="/ProductListPage.html">Smartphones & Tablets</a></strong></li>
+                                    <li><a href="/ProductListPage.html">I KALL</a></li>
+                                    <li><a href="/ProductListPage.html">Mi</a></li>
+                                    <li><a href="/ProductListPage.html">Realme</a></li>
+                                    <li><a href="/ProductListPage.html">Samsung</a></li>
+                                    <li><a href="/ProductListPage.html">Vivo</a></li>
+                                    <li><a href="/ProductListPage.html">Oppo</a></li>
+                                    <li><a href="/ProductListPage.html">Apple</a></li>
+                                    <li><a href="/ProductListPage.html">Techno</a></li>
+                                    <li><a href="/ProductListPage.html">Infinix</a></li>
+                                    <li><a href="/ProductListPage.html">Micromax</a></li>
                                     <br>
                                     <li><strong>Refurbished Smartphones</strong></li>
                                     <br><br>
