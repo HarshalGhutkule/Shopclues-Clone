@@ -48,7 +48,7 @@ A collaborative project built by a team of 5 executed in 5days.
 
 - Landing page :
 
-![Landing Page](https://user-images.githubusercontent.com/95927895/150688114-dc135ca9-a0f3-49d2-954e-adf88b2c61e5.png)
+![Landing Page](https://user-images.githubusercontent.com/95927895/158878832-a8681047-98e3-4bae-9498-936a3c04a932.png)
 
 - User page :
 
